@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+:root,
+:root.dark {
+  --primary-bg: #22252d;
+  --color-fg: #f8f8f8;
+  --secondary-bg: #292d36;
+  --button-bg: #272b33;
+}
+:root.light {
+  --primary-bg: #fff;
+  --color-fg: #292d36;
+  --secondary-bg: #f9f9f9;
+  --button-bg: #f7f7f7;
+}
+.dark_mode {
+  /* margin: 4px auto; */
+  width: max-content;
+  background: var(--button-bg);
+  padding: 4px 6px;
+  border-radius: 8px;
+}
+.dark_mode .dark,
+.dark_mode .light {
+  font-size: 30px;
+  color: var(--color-fg);
+  margin: 2px 8px;
+  cursor: pointer;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+.calculator {
+  width: 400px;
+  border: 1px solid #717377;
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--primary-bg);
+  /* box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5); */
+}
+input {
+  outline: none;
+  width: 100%;
+  border: none;
+  padding: 24px;
+  margin-top: 20px;
+  background: var(--button-bg);
+
+  /* background: transparent; */
+  /* box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1); */
+  font-size: 40px;
+  text-align: right;
+  cursor: pointer;
+  color: var(--color-fg);
+  box-shadow: 2px -8px 15px var(--secondary-bg);
+}
+input::placeholder {
+  color: var(--color-fg);
+}
+
+button {
+  border: none;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-fg);
+  font: 20px;
+  box-shadow: -8px -8px 15px var(--button-bg);
+  cursor: pointer;
+}
+.equal-btn {
+  background-color: #fb7c14;
+}
+.operator {
+  color: #6dee0a;
+}
